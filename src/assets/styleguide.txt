@@ -1,0 +1,12 @@
+Font style - Cormorant Upright, Open Sans
+font weights- 600, 700, 400
+colors- #DCCA87, #FFFFFF; #AAAAAA; #0C0C0C; #0C0B08;
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+</style>
+
+font-family: 'Cormorant Upright', serif;
+font-family: 'Open Sans', sans-serif;
+

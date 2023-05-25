@@ -1,7 +1,0 @@
-Font style - Cormorant Upright, Open Sans
-font weights- 600, 700, 400
-colors- #DCCA87, #FFFFFF; #AAAAAA; #0C0C0C; #0C0B08;
-
-
-
-
