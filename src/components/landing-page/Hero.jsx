@@ -6,12 +6,12 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-container">
-        <p className="hashtag">#Bar #Gericht</p>
+        <p className="hashtag"> #Gericht #Bar </p>
         <div className="hero-desc">
-          <p>chase the new flavour</p>
+          <p className="chase">chase the new flavour</p>
           <img src={spoon} alt="spoon image" />
           <h2>the key to fine dining</h2>
-          <p>
+          <p className="detail">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
             culpa nulla. Vitae quae praesentium, unde molestias dolorum odio
             repudiandae facilis.
@@ -19,11 +19,11 @@ function Hero() {
           <button>Explore Menu</button>
         </div>
         <div className="hero-img">
-          <img src={heroImg} alt="hero image" width="100%" />
+          <img src={heroImg} alt="hero image" />
         </div>
       </div>
       <p className="timer">
-        01 <span></span> 02 03 04
+        01 <span>02 03 04</span> 
       </p>
 
       <p className="scroll">
