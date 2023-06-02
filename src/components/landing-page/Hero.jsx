@@ -23,12 +23,12 @@ function Hero() {
         </div>
       </div>
       <p className="timer">
-        01 <span>02 03 04</span> 
+        01 <span>02 03 04</span>
       </p>
 
-      <p className="scroll">
+      <div className="scroll">
         <img src={scroll} alt="scroll img" />
-      </p>
+      </div>
     </section>
   );
 }

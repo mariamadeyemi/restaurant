@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
+$gold-color: #DCCA87;
+$white: #FFFFFF;
+$real-dark: #0C0B08;
+$extra-dark: #0C0C0C;
+$grey-color: #AAAAAA;
+$normal-weight: 400;
+$medium-weight: 600;
+$bold-weight: 700;
+$cormorant: 'Cormorant Upright', serif;
+$open-sans: 'Open Sans', sans-serif;
+$button-padding: 0.7em 1.5em;
+
 @mixin flex{
     display: flex;
     align-items: center;
@@ -20,6 +32,19 @@ body{
     color: #FFFFFF;
     font-size: 15px;
 }
+
+button{
+    font-family: 'Cormorant Upright', serif;
+    padding: 0.7em 1.5em;
+    background-color: #DCCA87;
+    color: #0C0B08;
+    border: none;
+    font-family: 'Cormorant Upright', serif;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
 
 
 
@@ -46,12 +71,13 @@ nav{
 }
 
 .hero{
-    padding: 1em 2em;
+    padding: 3em 8em 3em 2em;
+    position: relative;
 
     .hero-container{
         @include flex();
         justify-content: space-between;
-        margin-bottom: 1em;
+        margin-bottom: 3em;
 
         .hero-img{
             width: 40%;
@@ -125,4 +151,511 @@ nav{
         }
         
     }
+}
+
+.scroll{
+    width: 3em;
+    position: absolute;
+    bottom: 3em;
+    right: 1em;
+
+    img{
+        width: 100%;
+    }
+}
+
+
+.about{
+    @include flex();
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background: url('../assets/about-bg.png');
+    background-size: contain;
+    padding: 2em 2em 3em 2em;
+
+    .left{
+        text-align: end;
+        padding-left: 8rem;
+    }
+
+    .left, .right{
+       
+        h2{
+            font-family: $cormorant;
+            color: $gold-color;
+        }
+
+        p{
+            font-family: $open-sans;
+            color: $grey-color;
+            font-size: 14px;
+            margin-top: 0.6em;
+            margin-bottom: 1em;
+        }
+
+        button{
+            font-family: 'Cormorant Upright', serif;
+            padding: 0.7em 1.5em;
+            background-color: #DCCA87;
+            color: #0C0B08;
+            border: none;
+            font-family: 'Cormorant Upright', serif;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+    }
+
+    .right{
+        padding-right: 8rem;
+    }
+
+
+    .middle-img{
+        width: 4em;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.specials{
+    padding: 2em;
+
+    .specials-button{
+        text-align: center;
+    }
+}
+
+.specials-heading{
+    text-align: center;
+    margin-bottom: 2em;
+
+    p{
+        font-family: $cormorant;
+        text-transform: capitalize;
+        color: $grey-color;
+        font-size: 12px;
+        font-weight: $medium-weight;
+    }
+
+    h2{
+        font-family: $cormorant;
+        color: $gold-color;
+        font-size: 2rem;
+    }
+}
+
+.drinks{
+    @include flex();
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    .wine, .cocktails{
+        .column{
+            @include flex();
+            justify-content: space-between;
+            gap: 2em;
+            margin-bottom: 0.4em;
+
+            p{
+                text-transform: capitalize;
+                font-family: $cormorant;
+                color: $gold-color;
+                font-weight: $medium-weight;
+            }
+        }
+
+        .row{
+            margin-bottom: 0.8em;
+        }
+
+        .title{
+            font-family: $cormorant;
+            font-size: 1.5rem;
+            font-weight: $bold-weight;
+            text-transform: capitalize;
+            margin-bottom: 0.6em;
+        }
+
+    }
+
+    .middle-bottle{
+        width: 200px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.chef-container{
+    @include flex();
+    justify-content: center;
+    gap: 3em;
+    padding: 4em 2em;
+    background: url('../assets/BG (4).png');
+    background-size: cover;
+
+    .quote{
+        width: 30px;
+    }
+
+    .sign{
+        width: 120px;
+    }
+
+    .chef-img{
+        width: 40%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .chef-word{
+        max-width: 25em;
+        .word,h2,.chef-name,.chef-title {
+            text-transform: capitalize;
+        }
+
+        .word, h2, .chef-name{
+            font-family: $cormorant;   
+        }
+
+        h2{
+            color: $gold-color;
+            margin-bottom: 1em;
+            font-size: 2rem;
+        }
+
+        .desc{
+            text-align: justify;
+            line-height: 1.5;
+            color: $grey-color;
+            font-family: $open-sans;
+            margin-bottom: 2em;
+            font-size: 12px;
+        }
+
+        .chef-name{
+            color: $gold-color;
+            margin-bottom: 0.6em;
+            font-size: 1.2em;
+        }
+
+        .chef-title{
+            font-family: $open-sans;
+            color: $grey-color;
+            font-size: 12px;
+            margin-bottom: 1.5em;
+        }
+    }
+    
+}
+
+
+.award-container{
+    @include flex();
+    justify-content: center;
+    padding: 2em;
+    gap: 3em;
+
+   .award-img{
+    width: 250px;
+
+    img{
+        width: 100%;
+    }
+   }
+
+   .awards{
+    max-width: 30rem;
+   }
+
+   .award-heading{
+    margin-bottom: 1.5em;
+
+    p, h2{
+        font-family: $cormorant;
+        text-transform: capitalize;
+    }
+
+    h2{
+        color: $gold-color;
+        font-size: 2em;
+    }
+   }
+
+ .grp-one, .grp-two, .award-grp{
+    @include flex();
+    gap: 2em;
+    row-gap: 1em;
+    margin-bottom: 1em;
+   }
+
+   .award-grp img{
+    width: 60px;
+   }
+
+   .award-desc{
+       p:first-child{
+        color: $gold-color;
+        font-family: $cormorant;
+        margin-bottom: 0.5em;
+       }
+
+       p:last-child{
+        color: $grey-color;
+        font-family: $open-sans;
+        line-height: 1.5;
+        font-size: 12px;
+       }
+   }
+
+
+}
+
+
+.gallery-container{
+    @include flex();
+    padding: 1em 3em;
+    gap: 3em;
+    background: url('../assets/BG (3).png');
+    background-size: cover;
+   
+
+    .gallery{
+        @include flex();
+        gap: 1em;
+        overflow: hidden;
+
+        img{
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    .gallery-desc{
+        max-width: 26rem;
+
+        p:first-child, h2{
+            font-family: $cormorant;
+        }
+
+        h2{
+            font-size: 2em;
+            margin-bottom: 0.7em;
+            color: $gold-color;
+        }
+
+        .paragraph{
+            font-family: $open-sans;
+            color: $grey-color;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.contact-container{
+    @include flex();
+    justify-content: center;
+    gap: 3em;
+    padding: 3em 1em;
+    background: url('../assets/BG (5).png');
+    background-size: cover;
+
+    .contact-desc{
+        max-width: 20rem;
+
+        p:first-child, h2, .opening{
+            font-family: $cormorant;
+        }
+
+        h2{
+            color: $gold-color;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .detail{
+            font-family: $open-sans;
+            font-size: 12px;
+            color: $grey-color;
+            margin-bottom: 1em;
+        }
+
+        .opening{
+            text-transform: capitalize;
+            color: $gold-color;
+            font-size: 18px;
+            margin-bottom: 1em;
+        }
+
+        .day{
+            font-family: $open-sans;
+            color: $grey-color;
+            font-size: 13px;
+            margin-bottom: 1em;
+        }
+
+    }
+
+    .contact-img{
+        width: 40%;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.news-container{
+    @include flex();
+    justify-content: center;
+
+    .news{
+    text-align: center;
+    width: 50rem;
+    padding: 1em 2em;
+    border: 1px solid $grey-color;
+        p, h3{
+            font-family: $cormorant;
+        }
+        h3{
+            text-transform: capitalize;
+        color: $gold-color;
+        font-size: 2em;
+        margin-bottom: 0.6em;    
+        }
+
+        .miss{
+            text-transform: capitalize;
+            font-family: $open-sans;
+            color: $grey-color;
+            font-size: 12px;
+            margin-bottom: 2em;
+        }
+
+        form input{
+            padding: 0.8em;
+            background-color: transparent;
+            margin-right: 1em;
+            width: 60%;
+            border: 1px solid $gold-color;
+
+            &::placeholder{
+                text-transform: capitalize;
+                font-family: $cormorant;
+                color: $grey-color;
+            }
+        }
+
+        button{
+            padding: 0.5em 1em;
+        }
+    }
+}
+
+.footer-container{
+    @include flex();
+    justify-content: center;
+    gap: 3em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    text-align: center;
+
+    .footer-logo{
+        width: 120px;
+        object-fit: cover;
+    }
+
+    .box-one{
+
+        .contact{
+            text-transform: capitalize;
+            margin-bottom: 1em;
+            font-family: $cormorant;
+            font-size: 16px;
+        }
+
+        .street, .num{
+            font-family: $open-sans;
+            color: $grey-color;
+            font-size: 12px;
+        }
+
+        .street{
+            margin-bottom: 0.6em;
+        }
+
+        .num{
+            margin-bottom: 0.4em;
+        }
+
+    }
+
+    .box-two{
+        ul.socio-icons{
+            @include flex();
+            gap: 0.6em;
+            justify-content: center;
+        }
+
+        p{
+            font-family: $cormorant;
+            color: $grey-color;
+            font-size: 12px;
+            margin-bottom: 0.4em;
+            margin-top: 1em;
+        }
+    }
+
+    .box-three{
+            .day, .time{
+                font-family: $open-sans;
+                color: $grey-color;
+                font-size: 12px;
+            }
+
+            .working{
+                text-transform: capitalize;
+                margin-bottom: 1em;
+                font-family: $cormorant;
+                font-size: 16px;
+
+            }
+
+            .day{
+                margin-bottom: 0.4em;
+            }
+
+            .time{
+                margin-bottom: 0.6em;
+            }
+    }
+
+}
+
+footer{
+   position: relative; 
+   padding-bottom: 4em;
+     .copy{
+        text-align: center;
+        font-family: $open-sans;
+        font-size: 12px;
+        color: $grey-color;
+       }
+
+      .to-top{
+        position: absolute;
+        bottom: 40%;
+        right: 3em;
+      }
 }
